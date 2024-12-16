@@ -7,6 +7,26 @@ import { ChatErrorType } from '@/types/fetch';
 import { createErrorResponse } from '@/utils/errorResponse';
 
 export const runtime = 'edge';
+export const preferredRegion = [
+  'arn1',
+  'bom1',
+  'cdg1',
+  'cle1',
+  'cpt1',
+  'dub1',
+  'fra1',
+  'gru1',
+  /* "hkg1", Disabling hongkong edge runtime */
+  'hnd1',
+  'iad1',
+  'icn1',
+  'kix1',
+  'lhr1',
+  'pdx1',
+  'sfo1',
+  'sin1',
+  'syd1',
+];
 
 const noNeedAPIKey = (provider: string) =>
   [ModelProvider.OpenRouter, ModelProvider.TogetherAI].includes(provider as any);
